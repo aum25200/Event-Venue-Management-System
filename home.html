@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <link rel="icon" href="homeicon.png" type="image/x-icon">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 1em;
+            margin: 0 1em;
+            cursor: pointer;
+        }
+
+        section#home {
+            padding: 2em;
+            background-image: url('homebg1.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: ghostwhite;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Times, serif;
+            font-size: 25px;
+            height: 70vh;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+            text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.8); /* Text shadow for emphasis */
+        }
+
+        section#home h2 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        section#home p {
+            font-size: 1.2em;
+            margin-top: 0;
+        }
+
+        #about {
+            padding: 2em;
+            background-color: #f5f5f5;
+            color: #333;
+            text-align: center;
+        }
+
+        #about h2 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+            color: #ff6600; /* Orange color, you can change this */
+        }
+
+        #about p {
+            font-size: 1.2em;
+            margin-top: 0;
+        }
+
+        #about a {
+            color: #ff6600; /* Orange color, you can change this */
+            text-decoration: underline;
+        }
+
+        #services {
+            padding: 2em;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        .service-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .service {
+            flex: 0 1 30%; /* Adjust the width of each service as needed */
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .service:hover {
+            transform: scale(1.05);
+        }
+
+        .service h3 {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+            color: #ff6600; /* Orange color, you can change this */
+        }
+
+        .service p {
+            font-size: 1.2em;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: orangered; /* Orange color, you can change this */
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            font-family: sans-serif;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .cta-button:hover {
+            background-color: darkred; /* Darker shade on hover */
+        }
+
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        .contact-button {
+            display: inline-block;
+            background-color: #ff6600; /* Orange color, you can change this */
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .contact-button:hover {
+            background-color: darkred; /* Darker shade on hover */
+        }
+        .blink {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 49%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+       
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a onclick="scrollToSection('#about')">About</a>
+        <a href="#services">Services</a>
+        <a href="catering.html">Recipes</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="login-user.php">Booking</a>
+        <a href="eventnav.html">Events Package</a>
+        <a href="admin.html">
+        <i class="fas fa-user"></i>
+        </a>
+    </nav>
+     
+    <section id="home">
+        <h2>Welcome to Ramgeet Event Venues</h2>
+        <p>Your perfect choice for hosting memorable events.</p>
+        <div class="button-container">
+            <a href="feedback.php" class="cta-button">Give Feedback</a>
+            <a href="testimonials.html" class="cta-button" style="margin-left: 20px;">See Testimonials</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            Event Venues in Yeola - Grand Wedding Banquet Halls in Yeola, Nashik.
+            Ramgeet Event Venues is the best professional and leading catering firm in the city of Nashik and its suburbs area. We know how important your dream event is to you. Celebration is all about great food and a good time. When it comes to food, we believe taste, quality, and choice are paramount.
+        </p>
+        <p>
+            Wedding, Reception, Parties, Events - We have just one goal, and that is to make your event special.
+        </p>
+        <p>
+            Our menu offerings are extensive. Choose from a comprehensive list of dishes from our menu or request us to help you build a menu-plan that fits perfectly for your event at an affordable price.
+        </p>
+        <p>
+            Our Event Venue offers all types of catering solutions to meet the customer's demand. Whatever may be the occasion, from a small casual gathering to a lavish party and from a wedding to a corporate event. We can also home deliver the food or send our chefs to prepare all types of delicious food for you.
+        </p>
+        <p>
+            So, go ahead and give us an opportunity to serve you. Rely on our experience; we assure you that we'll make your dream event one of the most cherished memories of your life and it will be remembered for years and years.
+        </p>
+        <p>
+            <strong>Establishment-2020:</strong> Ramgeet Event Venues has been providing satisfactory professional and creative outdoor catering services for almost two decades, and we proudly announce ourselves as one of the leading outdoor caterers in Nashik. We specialize in providing Multi-cuisines and traditional food prepared by professional chefs under a hygienic environment.
+        </p>
+        <p>
+            <strong>Magnificent Banquet Halls In Nashik:</strong> Equipped With All The Modern Facilities, This Perfect Wedding Venue In Nashik.
+        </p>
+        <p>
+    <a href="eventnav.html" class="blink">Explore our Events Package option!</a>
+</p>
+</section>
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="service-container">
+        <div class="service">
+            <h3><a href="catering.html">Catering Services</a></h3>
+            <p>Indulge in exquisite dishes delivered to perfection, making your event a gastronomic delight.</p>
+        </div>
+        <div class="service">
+            <h3><a href="photo.html">Photography</a></h3>
+            <p>Capture the essence of your special moments with our skilled and creative photography services.</p>
+        </div>
+        <div class="service">
+            <h3><a href="music.html">Music Orchestra</a></h3>
+            <p>Set the perfect mood with our live music orchestra, adding a touch of elegance to your event.</p>
+        </div>
+        <div class="service">
+            <h3><a href="light.html">Lighting & Decorations</a></h3>
+            <p>Illuminate your event with enchanting lighting arrangements, creating a magical atmosphere.</p>
+        </div>
+        <div class="service">
+            <h3><a href="park.html">Parking</a></h3>
+            <p>Convenient and secure parking facilities to ensure a hassle-free experience for your guests.</p>
+        </div>
+        <div class="service">
+            <h3><a href="room.html">Room Services</a></h3>
+            <p>Experience comfort with our AC and non-AC room services, providing a relaxing stay for your guests.</p>
+        </div>
+        <div class="service">
+            <h3><a href="event.html">Event Managers</a></h3>
+            <p>Our experienced event managers ensure seamless execution, turning your vision into reality.</p>
+        </div>
+       
+
+    </div>
+</section>
+
+
+
+    <footer>
+        <p>&copy; 2023 Ramgeet Event Venues. All rights reserved.</p>
+        <a href="contact.html" class="contact-button">Contact Us</a>
+       
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.querySelector(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

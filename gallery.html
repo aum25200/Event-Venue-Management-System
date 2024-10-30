@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="icon" href="galleryicon.png" type="image/x-icon">
+    <title>Event Venue Gallery</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: mediumseagreen;
+            color: black;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        section h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .photo-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .photo-card:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+       <h1><i class="fa-solid fa-photo-film" style="color: black;"></i> Event Venue Gallery</h1>
+    </header>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        
+    </nav>
+
+    <section id="about">
+        <h2>About Our Event Venue</h2>
+        <p>Discover our stunning event venue, perfect for creating unforgettable moments. Learn more about our facilities and offerings.</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Photo Gallery</h2>
+        <div class="photo-gallery">
+            <div class="photo-card">
+                <img src="gal1.jpeg" alt="Event Venue 1">
+            </div>
+            <div class="photo-card">
+                <img src="gal2.jpg" alt="Event Venue 2">
+            </div>
+            <div class="photo-card">
+                <img src="gal3.png" alt="Event Venue 3">
+            </div>
+            <div class="photo-card">
+                <img src="gal4.jpeg" alt="Event Venue 4">
+            </div>
+            <div class="photo-card">
+                <img src="gal5.jpg" alt="Event Venue 4">
+            </div>
+            <div class="photo-card">
+                <img src="gal6.jpeg" alt="Event Venue 4">
+            </div>
+            <div class="photo-card">
+                <img src="homebg.jpeg" alt="Event Venue 4">
+            </div>
+            <div class="photo-card">
+                <img src="homebg1.jpeg" alt="Event Venue 4">
+            </div>
+            <!-- Add more photo cards with different images -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Event Venue. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="icon" href="eventnavicon.png" type="image/x-icon">
+    <title>Events</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: royalblue;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #ff6f61;
+            color: #fff;
+        }
+
+        .limited-offer {
+            background-color: hotpink;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 49%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .about-section {
+            margin-top: 10px;
+            padding: 15px;
+            background-color: #e6f7ff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .avail-now-btn {
+    display: block;
+    margin: 20px auto; /* Updated margin to center the button horizontally */
+    padding: 10px;
+    width: 40%;
+    background-color: darkgoldenrod;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+        .avail-now-btn:hover {
+            background-color: darkgoldenrod;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i class="fa-solid fa-box-open" style="color: white;"></i> Exclusive Wedding Event Package</h1>
+    </header>
+
+    <section>
+        <h2>Package Details</h2>
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>Catering Services</td>
+                <td>Delicious multi-course meals for you and your guests</td>
+            </tr>
+            <tr>
+                <td>Parking</td>
+                <td>Convenient and secure parking facilities</td>
+            </tr>
+            <tr>
+                <td>Lighting and Decorations</td>
+                <td>Beautiful lighting arrangements and stunning decorations</td>
+            </tr>
+            <tr>
+                <td>Room Services</td>
+                <td>Comfortable accommodation for the couple and special guests</td>
+            </tr>
+            <tr>
+                <td>Event Managers</td>
+                <td>Experienced event managers to ensure a smooth celebration</td>
+            </tr>
+            <tr>
+                <td>Music Orchestra</td>
+                <td>Live orchestra to enhance the atmosphere with enchanting melodies</td>
+            </tr>
+            <tr>
+                <td>Photography</td>
+                <td>Professional photographers to capture every special moment</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="limited-offer">
+                    <strong>50% Discount for a Limited Time! Limited Period Offer</strong>
+                </td>
+            </tr>
+        </table>
+        <a href="login-user.php" class="avail-now-btn">Avail Now!<a>
+    </section>
+
+    <div class="about-section">
+        <h2>About This Package</h2>
+        <p>Experience the wedding of your dreams with our Exclusive Wedding Package. From sumptuous catering and stunning decorations to professional photography and live music, we've got everything covered. Our dedicated event managers ensure a seamless celebration, and for a limited time, enjoy a 50% discount on this extraordinary package. Make your special day truly unforgettable with us!</p>
+    </div>
+</body>
+</html>

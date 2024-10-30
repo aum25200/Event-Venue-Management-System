@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="feedbackicon.png" type="image/x-icon">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styling for the "Express Your Feedback Freely" section */
+        .additional-info {
+            max-width: 600px; /* Adjusted width */
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #e6f7ff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .additional-info h3 {
+            color: #007bff; /* Blue color for the heading */
+        }
+
+        .additional-info p {
+            color: #555;
+        }
+
+        form {
+            max-width: 400px; /* Reduced container width */
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: purple;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: maroon ;
+        }
+
+        .error-message {
+            color: #ff0000;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="additional-info">
+        <h3>Express Your Feedback Freely</h3>
+        <p>We highly value your opinion! Your feedback is crucial in helping us understand your experience and make necessary improvements to our services. Feel free to express your thoughts and suggestions in the comments section above.</p>
+        <p>Thank you for being a part of making our services even better!</p>
+    </div>
+
+    <form id="feedbackForm" onsubmit="return validateForm()">
+        <h2>Events Feedback</h2>
+
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="rating">Rate your experience (1-5):</label>
+        <input type="number" id="rating" name="rating" min="1" max="5" required>
+
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="4" required></textarea>
+
+        <input type="submit" value="Submit Feedback">
+    </form>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var rating = document.getElementById('rating').value;
+
+            // Simple validation
+            if (name === '' || email === '' || rating === '') {
+                alert('All fields must be filled out');
+                return false;
+            }
+
+            // You can add more complex validation here if needed
+
+            return true;
+        }
+    </script>
+</body>
+</html>

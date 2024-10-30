@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="icon" href="catericon2.png" type="image/x-icon">
+    <title>Catering Services and Recipes</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: limegreen;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        .dropdown-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid black;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+        }
+
+        .about-us {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .about-us h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .about-us p {
+            line-height: 1.6;
+        }
+
+        .food-photos {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .food-photos img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+
+        <h1><i class="fas fa-leaf" style="color: white;"></i> Catering Services and Recipes</h1>
+    </header>
+    
+    <nav>
+        <a href="home.html">Home</a>
+    </nav>
+
+    <div class="wrapper"> <!-- Add a wrapper around main and footer -->
+        <main>
+            <div class="about-us" id="aboutUsSection">
+                <h2>About Us</h2>
+                <p>Welcome to Catering Services and Recipes! We are dedicated to providing delicious meals for your events. Our experienced chefs create a diverse range of recipes to suit your taste. Enjoy the culinary experience with us!</p>
+            </div>
+            
+            <div class="dropdown-container">
+                <label for="cateringService">Select Catering Service:</label>
+                <select id="cateringService">
+                    <option value="event">Event Catering</option>
+                    <option value="wedding">Wedding Catering</option>
+                    <option value="corporate">Corporate Events Catering</option>
+                </select>
+            </div>
+
+            <div class="food-photos">
+                <h2>Food Photos</h2>
+                <img src="cater2.png" alt="Food Photo">
+                <img src="cater4.jpg" alt="Food Photo"><br><br>
+                <img src="cater1.jpg" alt="Food Photo">
+                <!-- Add more img tags as needed -->
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Meal</th>
+                        <th>Recipe</th>
+                    </tr>
+                </thead>
+                <tbody id="recipeTableBody">
+                    <!-- Recipes will be dynamically added here based on the selected catering service -->
+                </tbody>
+            </table>
+
+            <h2>Plates and Rates (in Rupees)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Plate Type</th>
+                        <th>Rate(Per Plate in Rs)</th>
+                    </tr>
+                </thead>
+                <tbody id="rateTableBody">
+                    <!-- Rates will be dynamically added here based on the selected catering service -->
+                </tbody>
+            </table>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 Catering Services. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Define dummy veg recipes for each meal type
+        const dummyRecipes = {
+            event: {
+                breakfast: 'Veg Sandwich',
+                lunch: 'Vegetable Biryani',
+                dinner: 'Paneer Tikka Masala',
+            },
+            wedding: {
+                breakfast: 'Masala Dosa',
+                lunch: 'Vegetable Pulao',
+                dinner: 'Veg Thali',
+            },
+            corporate: {
+                breakfast: 'Poha',
+                lunch: 'Mixed Vegetable Curry with Roti',
+                dinner: 'Chana Masala with Jeera Rice',
+            },
+        };
+
+        // Function to update the recipe and rate tables based on the selected catering service
+        function updateTables() {
+            const cateringService = document.getElementById('cateringService').value;
+            const recipeTableBody = document.getElementById('recipeTableBody');
+            const rateTableBody = document.getElementById('rateTableBody');
+            recipeTableBody.innerHTML = '';
+            rateTableBody.innerHTML = '';
+
+            // Update recipe table
+            for (const meal in dummyRecipes[cateringService]) {
+                const row = document.createElement('tr');
+                const cell1 = document.createElement('td');
+                const cell2 = document.createElement('td');
+                cell1.textContent = meal.charAt(0).toUpperCase() + meal.slice(1);
+                cell2.textContent = dummyRecipes[cateringService][meal];
+                row.appendChild(cell1);
+                row.appendChild(cell2);
+                recipeTableBody.appendChild(row);
+            }
+
+            // Update rate table
+            // For simplicity, let's use the same rates for all catering services
+            const rates = {
+                standard:  150,
+                premium:  200,
+                deluxe:   250,
+            };
+
+            for (const plate in rates) {
+                const row = document.createElement('tr');
+                const cell1 = document.createElement('td');
+                const cell2 = document.createElement('td');
+                cell1.textContent = plate.charAt(0).toUpperCase() + plate.slice(1);
+                cell2.textContent = rates[plate];
+                row.appendChild(cell1);
+                row.appendChild(cell2);
+                rateTableBody.appendChild(row);
+            }
+        }
+
+        // Attach event listener to the catering service dropdown
+        document.getElementById('cateringService').addEventListener('change', updateTables);
+
+        // Initial update when the page loads
+        updateTables();
+    </script>
+
+</body>
+</html>

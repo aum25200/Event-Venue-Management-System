@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .confirmation-message {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .confirmation-message h2 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .confirmation-message p {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .confirmation-message button {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .payment-options {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .payment-options p {
+            margin: 5px 0;
+        }
+
+        .qr-code {
+            margin-top: 20px;
+            /* Placeholder styles for the QR code */
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-message">
+        <h2>Booking Successful!</h2>
+        <p>Your booking has been received. You have 2 hours to confirm the booking.</p>
+        <p id="confirmationTimer"></p>
+        <button onclick="showPaymentOptions()">Confirm Booking</button>
+
+        <div class="payment-options" id="paymentOptions">
+            <p>Choose your payment method:</p>
+            <select id="paymentMethod" onchange="generateQRCode()">
+                <option value="netBanking">Net Banking</option>
+                <option value="creditCard">Credit Card</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <div class="qr-code" id="qrCodePlaceholder">
+                <!-- QR code will be displayed here -->
+                <!-- You need to implement server-side logic to generate the QR code -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showPaymentOptions() {
+            var confirmationMessage = document.querySelector('.confirmation-message');
+            var paymentOptions = document.getElementById('paymentOptions');
+            var confirmationTimer = document.getElementById('confirmationTimer');
+
+            confirmationMessage.innerHTML = `
+                <h2>Booking Confirmed!</h2>
+                <p>Your booking has been confirmed. You will receive a confirmation email shortly.</p>
+            `;
+
+            // Hide the timer and show payment options
+            confirmationTimer.style.display = 'none';
+            paymentOptions.style.display = 'block';
+        }
+
+        function generateQRCode() {
+            var paymentMethod = document.getElementById('paymentMethod').value;
+
+            if (paymentMethod === 'netBanking') {
+                // Simulate generating QR code for online payment
+                var qrCodePlaceholder = document.getElementById('qrCodePlaceholder');
+                qrCodePlaceholder.innerHTML = '<img src="path/to/your/generated/qr-code.png" alt="QR Code">';
+            }
+        }
+
+        // Countdown timer for 2 hours
+        var countDownDate = new Date().getTime() + 2 * 60 * 60 * 1000;
+
+        var x = setInterval(function () {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+            document.getElementById("confirmationTimer").innerHTML = hours + "h " + minutes + "m ";
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("confirmationTimer").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

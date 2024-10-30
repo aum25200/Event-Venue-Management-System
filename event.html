@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <link rel="icon" href="managericon.png" type="image/x-icon">
+    <title>Event Management Services</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: lightsalmon;
+            color: black;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        section h2 {
+            color: #333;
+        }
+
+        .event-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .event-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .photo-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .photo-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i class="fa-solid fa-calendar-check" style="color: black;"></i> Event Managers</h1>
+    </header>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#event-services">Services</a>
+        <a href="#event-cost">Costs</a>
+        <a href="#photos">Event Photos</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Our Event Management Team</h2>
+        <p>We are a dedicated team of event managers passionate about creating memorable experiences. Learn more about our services and costs below.</p>
+    </section>
+
+    <section id="event-services">
+        <h2>Event Services</h2>
+        <div class="event-info">
+            <div class="event-card">
+                <h3>Wedding Planning</h3>
+                <p>Full-service wedding planning, including venue selection, decor, catering, and coordination.</p>
+                <p>Starting from Rs 50,000</p>
+            </div>
+            <div class="event-card">
+                <h3>Corporate Events</h3>
+                <p>Professional planning for corporate events, conferences, and seminars.</p>
+                <p>Starting from Rs 30,000</p>
+            </div>
+            <!-- Add more event cards for different types -->
+        </div>
+    </section>
+
+    <section id="event-cost">
+        <h2>Event Costs</h2>
+        <div class="event-info">
+            <div class="event-card">
+                <h3>Standard Package</h3>
+                <p>Includes basic event planning services. Ideal for smaller events.</p>
+                <p>Starting from Rs 20,000</p>
+            </div>
+            <div class="event-card">
+                <h3>Premium Package</h3>
+                <p>Comprehensive event planning with additional personalized services.</p>
+                <p>Starting from Rs 40,000</p>
+            </div>
+            <!-- Add more event cards for different packages -->
+        </div>
+    </section>
+
+    
+
+    <footer>
+        <p>&copy; 2023 Event Managers. All rights reserved.</p>
+    </footer>
+</body>
+</html>

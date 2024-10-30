@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="icon" href="contacticon.png" type="image/x-icon">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #444;
+            padding: 1em;
+            text-align: center;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            padding: 1em;
+            margin: 0 1em;
+            cursor: pointer;
+        }
+
+        section#contact {
+            padding: 2em;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        section#contact h2 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+            color: #ff6600; /* Orange color, you can change this */
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .info-block {
+            flex: 0 1 30%;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .info-block:hover {
+            transform: scale(1.05);
+        }
+
+        .info-block h3 {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+            color: #ff6600; /* Orange color, you can change this */
+        }
+
+        .info-block p {
+            font-size: 1.2em;
+        }
+
+        .map-container {
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="home.html">Home</a>
+        <a href="home.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="#contact">Contact</a>
+    </header>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        
+        <div class="contact-info">
+    <div class="info-block">
+        <h3><i class="fas fa-envelope fa-spin"></i> Email</h3>
+        <p>shindevishal45@gmail.com</p>
+    </div>
+
+    <div class="info-block">
+        <h3><i class="fas fa-phone fa-shake"></i> Phone</h3>
+        <p>+91 7040336047</p>
+        <p>+91 9322617147</p>
+    </div>
+
+    <div class="info-block">
+        <h3><i class="fas fa-map-marker-alt fa-beat"></i> Address</h3>
+        <p>2FPW+8RV, Maharashtra State Highway 30, Nagde, Yeola, Maharashtra 423401, India</p>
+    </div>
+</div>
+
+
+        <div class="map-container">
+            <!-- Replace the iframe src attribute with your Google Maps embed code -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3748.3481418482074!2d74.49243727241699!3d20.035855380002378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdc39ce4a56b56b%3A0x9791be73b604856!2sRam%20Geet%20AC%20Marriage%20Hall!5e0!3m2!1sen!2sca!4v1699721941399!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Ramgeet Event Venues. All rights reserved.</p>
+    </footer>
+</body>
+</html>
